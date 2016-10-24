@@ -80,7 +80,7 @@ public class FileUploadServlet extends HttpServlet {
             try {
                 List<FileItem> items = upload.parseRequest(request);
                 for (FileItem item : items) {
-                    if (item.isFormField()) { //表单输入域(说明)
+                    if (item.isFormField()) { //表单输入域
                         System.out.println(item.getFieldName());
                     } else { // 文件上传域
                         String name = item.getName();
